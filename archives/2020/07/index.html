@@ -1,12 +1,7 @@
-extends partial/layout.pug
+extends includes/layout
 
-block container
-    include mixins/post.pug
-    +postList()
-
-block pagination
-    include mixins/paginator.pug
-    +home()
-
-block copyright
-    include partial/copyright.pug
+block content
+    .page(itemscope itemtype='http://schema.org/CreativeWork')
+          each article in page.posts.data
+              if article.academia
+                  article!= article.content
