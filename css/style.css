@@ -1,0 +1,271 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fafafa;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header styles */
+.header {
+    text-align: center;
+    padding: 60px 0 30px;
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 40px;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.navigation ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.navigation a:hover {
+    color: #3498db;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3498db;
+    transition: width 0.3s;
+}
+
+.navigation a:hover::after {
+    width: 100%;
+}
+
+/* Section styles */
+.section {
+    margin-bottom: 60px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #222;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.content {
+    line-height: 1.8;
+}
+
+/* Publication styles */
+.publication-item {
+    margin-bottom: 30px;
+}
+
+.publication-item h3 {
+    font-size: 1.3rem;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.publication-item ul {
+    list-style: none;
+}
+
+.publication-item li {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.publication-item li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.publication-title {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #2980b9;
+}
+
+.publication-authors, .publication-venue {
+    display: block;
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.publication-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #3498db;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.publication-link:hover {
+    text-decoration: underline;
+}
+
+/* Award styles */
+.award-item {
+    display: flex;
+    margin-bottom: 25px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.award-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.award-year {
+    min-width: 80px;
+    font-weight: 600;
+    color: #3498db;
+}
+
+.award-details h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.award-details p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Contact styles */
+.contact-info {
+    margin: 20px 0;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #3498db;
+    width: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    color: #555;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    background: #3498db;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Footer styles */
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    color: #777;
+    font-size: 0.9rem;
+    border-top: 1px solid #eaeaea;
+    margin-top: 40px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navigation ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .award-item {
+        flex-direction: column;
+    }
+    
+    .award-year {
+        margin-bottom: 10px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .section {
+        padding: 20px;
+    }
+}
